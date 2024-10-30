@@ -19,9 +19,14 @@ pipeline {
                 echo 'Running tests in Test environment...'
             }
         }
-        stage('Test in QA environment'){
+        stage('Test in pre-QA environment'){
             steps {
-                echo 'Running tests in QA environment'
+                echo 'Running tests in Pre-QA environment'
+            }
+        }
+        stage('Test in QA environment') {
+            steps {
+                echo 'Runnin tests in QA environment'
             }
         }
         stage('Deploy') {
