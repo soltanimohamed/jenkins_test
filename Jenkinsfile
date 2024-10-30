@@ -14,9 +14,14 @@ pipeline {
                 echo 'Building project...'
             }
         }
-        stage('Test') {
+        stage('Test in Test environment') {
             steps {
-                echo 'Running tests...'
+                echo 'Running tests in Test environment...'
+            }
+        }
+        stage('Test in QA environment'){
+            steps {
+                echo 'Running tests in QA environment'
             }
         }
         stage('Deploy') {
